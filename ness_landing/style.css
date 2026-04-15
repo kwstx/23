@@ -156,6 +156,25 @@ body {
     color: var(--sic-blue);
 }
 
+.waitlist-button {
+    text-decoration: none;
+    color: var(--sic-text-dark);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 24px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 40px;
+    background: transparent;
+    transition: all 0.3s;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+.waitlist-button:hover {
+    background: var(--sic-text-dark);
+    color: white;
+}
+
 /* Ticker Styles */
 .ticker-wrapper {
     position: fixed;
