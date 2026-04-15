@@ -124,7 +124,9 @@ body {
     background: radial-gradient(circle closest-side, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0) 100%);
     padding: 60px 100px;
     border-radius: 50%;
-    margin-top: -60px;
+    margin-top: 40px;
+    position: sticky;
+    top: 40%;
 }
 
 .monogram {
