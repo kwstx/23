@@ -350,8 +350,11 @@ body {
 
 .paypal-col-desc {
     font-size: 15px;
-    line-height: 1.6;
-    color: #4a4a4a;
+    font-family: var(--sic-font-sans);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    font-weight: 400;
+    color: #000000;
     margin-bottom: 30px;
     min-height: 48px;
 }
