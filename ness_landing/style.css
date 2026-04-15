@@ -339,11 +339,13 @@ body {
 }
 
 .paypal-col-title {
-    font-size: 28px;
+    font-family: var(--sic-font-serif);
+    font-size: 5rem;
     font-weight: 400;
-    color: #2c2e2f;
+    line-height: 1;
+    letter-spacing: -1px;
+    color: var(--sic-blue);
     margin-bottom: 16px;
-    font-family: var(--sic-font-sans);
 }
 
 .paypal-col-desc {
