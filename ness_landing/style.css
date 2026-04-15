@@ -390,7 +390,7 @@ body {
 .floral-section {
     min-height: 100vh;
     background-image: url('floral_bg.png');
-    background-size: contain;
+    background-size: 85%;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #FFFFFF;
