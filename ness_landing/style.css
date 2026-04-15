@@ -23,12 +23,12 @@ body {
 
 .background-container {
     position: fixed;
-    top: 48px;
-    left: 48px;
-    right: 48px;
-    bottom: 48px;
-    width: calc(100vw - 96px);
-    height: calc(100vh - 96px);
+    top: 90px;
+    left: 12px;
+    right: 12px;
+    bottom: 100px;
+    width: calc(100vw - 24px);
+    height: calc(100vh - 190px);
     background-image: url('bg.png');
     background-size: cover;
     background-position: center;
