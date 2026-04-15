@@ -385,3 +385,16 @@ body {
         gap: 60px;
     }
 }
+
+/* Floral Section */
+.floral-section {
+    min-height: 100vh;
+    background-image: url('floral_bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 220px; /* Leave space for ticker */
+}
