@@ -360,20 +360,23 @@ body {
 }
 
 .paypal-btn {
-    display: inline-block;
-    padding: 12px 48px;
-    border: 1px solid #0070ba;
-    border-radius: 40px;
-    color: #0070ba;
-    font-weight: 700;
     text-decoration: none;
-    font-size: 15px;
-    transition: all 0.3s ease;
-    background-color: transparent;
+    color: var(--sic-text-dark);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 24px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 40px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+    display: inline-block;
+    letter-spacing: 0.5px;
 }
 
 .paypal-btn:hover {
-    box-shadow: inset 0 0 0 1px #0070ba;
+    background: var(--sic-text-dark);
+    color: white;
 }
 
 @media (max-width: 768px) {
