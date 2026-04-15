@@ -256,9 +256,9 @@ body {
     position: relative;
     z-index: 10;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 100px 48px;
+    padding: 100px 6%;
     padding-bottom: 120px;
 }
 
