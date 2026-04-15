@@ -252,7 +252,7 @@ body {
 /* Info Page Section */
 .info-page {
     min-height: 100vh;
-    background-color: #FAFAFA;
+    background-color: #FFFFFF;
     position: relative;
     z-index: 10;
     display: flex;
@@ -292,7 +292,7 @@ body {
 
 /* PayPal Section */
 .paypal-section {
-    background-color: #fff;
+    background-color: #FFFFFF;
     padding: 100px 5%;
     padding-bottom: 220px; /* Leave space for ticker */
     display: flex;
