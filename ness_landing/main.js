@@ -1,30 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const container = document.querySelector('.magic-particles');
-  const particleCount = 60; // Slightly more particles for better visual effect
+    // Text animation logic
+    const p = document.querySelector('.info-main-text');
+    if (p) {
+        const text = p.textContent.trim();
+        const words = text.split(/\s+/);
+        p.innerHTML = '';
+        
+        words.forEach((word, wordIndex) => {
+            const wordSpan = document.createElement('span');
+            wordSpan.style.display = 'inline-block';
+            
+            for (let i = 0; i < word.length; i++) {
+                const charSpan = document.createElement('span');
+                charSpan.textContent = word[i];
+                charSpan.classList.add('anim-char');
+                wordSpan.appendChild(charSpan);
+            }
+            
+            p.appendChild(wordSpan);
+            if (wordIndex < words.length - 1) {
+                p.appendChild(document.createTextNode(' '));
+            }
+        });
 
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    
-    // Distribute particles across the viewport
-    const posX = Math.random() * 100;
-    const posY = Math.random() * 100;
-    
-    particle.style.left = `${posX}%`;
-    particle.style.top = `${posY}%`;
-    
-    // Vary the sizes to add depth
-    const size = Math.random() * 2.5 + 2;
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-    
-    // Randomize the animation delays to create a chaotic, natural glowing effect
-    const delay = Math.random() * 5;
-    const duration = Math.random() * 4 + 3; // 3 to 7 seconds duration
-    
-    particle.style.animationDelay = `${delay}s`;
-    particle.style.animationDuration = `${duration}s`;
-    
-    container.appendChild(particle);
-  }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const chars = entry.target.querySelectorAll('.anim-char');
+                    chars.forEach((char, index) => {
+                        setTimeout(() => {
+                            char.style.color = '#2A2ECD';
+                        }, index * 20); // 20ms delay per letter
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 }); // trigger when at least 30% visible
+
+        observer.observe(p);
+    }
 });
